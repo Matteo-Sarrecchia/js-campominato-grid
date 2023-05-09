@@ -1,27 +1,36 @@
 const container = document.getElementById("container");
+const buttonPlay = document.getElementById("button-play")
 
-for (let i=1; i <= 100; i++ ){
-    const square = createElement("div", "square")
-    console.log(square);
-
-    container.append(square)
-
-    // creo elemento span per insierire i numeri
-    const span = createElement("span", "span")
-    square.append(span)
-    span.innerHTML = i
-
-    // aggiungi a square evento con click
-    square.addEventListener("click",
+buttonPlay.addEventListener("click",
     
-        function(){
-            square.classList.add("blue")
-            console.log("Hai cliccato la casella numero: ", i)
+    function(){
+        for (let i=1; i <= 100; i++ ){
+            const square = createElement("div", "square")
+            console.log(square);
+        
+            container.append(square)
+        
+            // creo elemento span per insierire i numeri
+            const span = createElement("span", "span")
+            square.append(span)
+            span.innerHTML = i
+        
+            // aggiungi a square evento con click
+            square.addEventListener("click",
+            
+                function(){
+                    square.classList.add("blue")
+                    console.log("Hai cliccato la casella numero: ", i)
+                }
+        
+            )
+        
         }
-
-    )
-
 }
+
+)
+
+
 
 
 addEventListener
